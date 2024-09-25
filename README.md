@@ -64,6 +64,7 @@ classify_images_in_folder(task_name, image_folder, output_folder, model_name, im
 ```
 
 ##models accuracy
+
 all the models accuracy  you can see on the models page.
 - [Classification](https://huggingface.co/deepghs/anime_classification)
 - [Monochrome](https://huggingface.co/deepghs/monochrome_detect)
