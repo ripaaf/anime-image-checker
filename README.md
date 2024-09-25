@@ -1,5 +1,5 @@
 # anime image checker
-a terminal based image checker from huggingface repo of [anime_classification](https://huggingface.co/deepghs/anime_classification  "anime_classification"). The difference from huggingface is that the project can be run in offline mode. this project also not have any interface from the original because i dont like it.
+a non-interface image checker from huggingface repo of [anime_classification](https://huggingface.co/deepghs/anime_classification  "anime_classification"). The difference from huggingface is that the project can be run in offline mode. this project also not have any interface from the original because i dont like it.
 
 see [Q&A](#qa).
 
