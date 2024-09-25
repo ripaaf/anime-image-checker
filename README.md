@@ -1,5 +1,5 @@
 # anime image checker
-a terminal based image checker from huggingface repo of [anime_classification](https://huggingface.co/deepghs/anime_classification  "anime_classification"). The difference from huggingface is that the project can be run in offline mode. this project also not have any interface from the original because i dont like it.
+a non-interface image checker from huggingface repo of [anime_classification](https://huggingface.co/deepghs/anime_classification  "anime_classification"). The difference from huggingface is that the project can be run in offline mode. this project also not have any interface from the original because i dont like it.
 
 see [Q&A](#qa).
 
@@ -21,7 +21,7 @@ you can simply enambling the code in `classify.py` to download all the models. t
 download_all_models(repository)
 ```
 then if all model already downloaded you can simply disabled it again by putting hastag infront the code. 
-> why disable it? because it more faster to skip the process of downloading all the model the verify it rather then it checks all the downloaded model.
+> why disable it? because it more faster to skip the process of downloading all the model then verify all the model rather then it checks all the downloaded model.
 
 ------------
 
