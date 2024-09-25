@@ -1,7 +1,7 @@
 # anime image checker
 a terminal based image checker from huggingface repo of [anime_classification](https://huggingface.co/deepghs/anime_classification  "anime_classification"). The difference from huggingface is that the project can be run in offline mode. this project also not have any interface from the original because i dont like it.
 
-##how to install
+## how to install
 first clone this repo by using :
 ```
 git clone https://github.com/ripaaf/anime-image-checker.git
@@ -11,7 +11,7 @@ then you can download all the `requirements.txt` for this able to run
 pip install -r requirements.txt
 ```
 you can run the project from the `main.py` file.
-###downloading all the model
+### downloading all the model
 you can simply enambling the code in `classify.py` to download all the models. the line you looking for is line 18 :
 
 *remove the hastag infront of the code*
@@ -21,7 +21,7 @@ download_all_models(repository)
 then if all model already downloaded you can simply disabled it again by putting hastag infront the code. 
 > why disable it? because it more faster to skip the process of downloading all the model the verify it rather then it checks all the downloaded model.
 
-###explanation usage
+### explanation usage
 all the code for modifying are in the `main.py` 
 ```
 if __name__ == "__main__":
@@ -63,7 +63,7 @@ and then for multiple image you can enable :
 classify_images_in_folder(task_name, image_folder, output_folder, model_name, imgsize)
 ```
 
-##models accuracy
+## models accuracy
 
 all the models accuracy  you can see on the models page.
 - [Classification](https://huggingface.co/deepghs/anime_classification)
