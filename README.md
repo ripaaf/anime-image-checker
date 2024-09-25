@@ -1,6 +1,8 @@
 # anime image checker
 a terminal based image checker from huggingface repo of [anime_classification](https://huggingface.co/deepghs/anime_classification  "anime_classification"). The difference from huggingface is that the project can be run in offline mode. this project also not have any interface from the original because i dont like it.
 
+see [qna](#q&a).
+
 ## how to install
 first clone this repo by using :
 ```
@@ -63,8 +65,18 @@ and then for multiple image you can enable :
 classify_images_in_folder(task_name, image_folder, output_folder, model_name, imgsize)
 ```
 
-## models accuracy
+## Q&A
+#### where is the model stored?
+all the model is stored in the same directory of the file.
 
+#### why no interface?
+because it's complicated so I removed it so that the code can run more efficiently and quickly
+#### what it used to classified the image?
+it used AI that already pre-trained for only this spesific case. the model for the AI is small but it have many models. all the models if downloaded it can take up to 10gb of memory used.
+#### why you do this? why dont use the 1 image only at time?
+because i need this to organize my gallery😭, my gallery is so ruin that i have to make a spesific app to organize it. also i modified this for processing multiple anime photo only. there are other photo organizer i made but i later publish it when the code is not messy.
+
+## models accuracy
 all the models accuracy  you can see on the models page.
 - [Classification](https://huggingface.co/deepghs/anime_classification)
 - [Monochrome](https://huggingface.co/deepghs/monochrome_detect)
