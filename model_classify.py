@@ -1,5 +1,3 @@
-# reference from https://huggingface.co/deepghs/anime_classification 
-
 from typing import Mapping, Tuple, Optional
 from PIL import Image
 from download_models import _img_encode
@@ -8,7 +6,6 @@ from imgutils.data import load_image
 from natsort import natsorted
 from repo_map import *
 
-# Classification task class
 class Classification:
     def __init__(self, title: str, repository: str, default_model=None, imgsize: int = 384):
         self.repo_models = repo_models
@@ -29,7 +26,6 @@ class Classification:
         self.default_model = default_model or self.models[0]
         self.imgsize = imgsize
 
-    # Perform classification
     def _gr_classification(self, image: Image.Image, model_name: str, size=384) -> Mapping[str, float]:
         print(f"Running classification for model '{model_name}' with image size {size}")
         image = load_image(image, mode='RGB')

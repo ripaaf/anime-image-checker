@@ -10,25 +10,19 @@ from onnxruntime import get_available_providers, get_all_providers
 hfs = HfFileSystem()
 
 
-# Function to load ONNX model from Hugging Face repository
 @lru_cache()
 def open_model_from_repo(repository, model):
-    # Create a local directory to store the repository's models
     repo_dir = os.path.join(os.getcwd(), repository.replace('/', '_'))
-    
-    # Search for the model in the nested subdirectory
+
     model_dir = os.path.join(repo_dir, model, model)
-    
-    # If the nested folder structure doesn't exist, try without double nesting
+
     if not os.path.exists(model_dir):
         model_dir = os.path.join(repo_dir, model)
     
     print(f"Loading model '{model}' from local directory '{model_dir}'")
-    
-    # Load the ONNX model
+
     runtime = _open_onnx_model(os.path.join(model_dir, 'model.onnx'))
-    
-    # Load the labels from meta.json
+
     with open(os.path.join(model_dir, 'meta.json'), 'r') as f:
         labels = json.load(f)['labels']
     
@@ -36,7 +30,6 @@ def open_model_from_repo(repository, model):
     return runtime, labels
 
 
-# Function to open the ONNX model
 @lru_cache()
 def _open_onnx_model(ckpt: str, provider: str = None) -> InferenceSession:
     print(f"Attempting to open ONNX model from checkpoint: {ckpt}")
@@ -61,7 +54,6 @@ def _open_onnx_model(ckpt: str, provider: str = None) -> InferenceSession:
     return session
 
 
-# Function to get ONNX providers
 def get_onnx_provider(provider: Optional[str] = None):
     alias = {'gpu': "CUDAExecutionProvider", "trt": "TensorrtExecutionProvider"}
     

@@ -21,7 +21,6 @@ task_map = {
     '[Beta] Danbooru Aesthetic': ('[Beta] Danbooru Aesthetic', 'deepghs/anime_aesthetic', 'caformer_s36_v0_ls0.2'),
 }
 
-
 repo_models = {
     'deepghs/anime_classification': ['caformer_s36', 'caformer_s36_plus', 'caformer_s36_v1', 'caformer_s36_v1.1_focal', 'caformer_s36_v1.2_focal', 'caformer_s36_v1.3_focal', 'caformer_s36_v1.4_focal', 'caformer_s36_v1.4_focal_fp32', 'mobilenetv3', 'mobilenetv3_dist', 'mobilenetv3_sce', 'mobilenetv3_sce_dist', 'mobilenetv3_v1.2_dist', 'mobilenetv3_v1.3_dist', 'mobilenetv3_v1.4_dist', 'mobilenetv3_v1_dist', 'mobilevitv2_150'],
     'deepghs/monochrome_detect': ['caformer_s36', 'caformer_s36_plus', 'caformer_s36_plus_safe2', 'caformer_s36_safe2', 'mobilenetv3_large_100', 'mobilenetv3_large_100_dist', 'mobilenetv3_large_100_dist_safe2', 'mobilenetv3_large_100_safe2'],
