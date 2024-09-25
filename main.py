@@ -10,8 +10,8 @@ if __name__ == "__main__":
 
     image_path = "images.jpg"
 
-    image_folder = "D:/Ripa/sorting whatsapp/hape/whatsap/arsip 23 juni 2023/foto"
-    output_folder = "D:/Ripa/sorting whatsapp/hape/whatsap/arsip 23 juni 2023/foto/sorted"
+    image_folder = "your_path_here"
+    output_folder = "your_path_here/sorted"
 
     # for 1 image only #
     run_classification(task_name, image_path, model_name, imgsize)
