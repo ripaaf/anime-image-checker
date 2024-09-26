@@ -14,14 +14,63 @@ pip install -r requirements.txt
 ```
 you can run the project from the `main.py` file.
 ## downloading all the model
-you can simply enambling the code in `classify.py` to download all the models. the line you looking for is line 18 :
+you can simply enambling the code in `classify.py` to download all the models. the line you looking for is line 17 :
+
+> [!IMPORTANT]  
+> to download the model you run **for 1 image only first** so it can download the neccesary models, then you can disabled the download function to use 1 image or multiple image processing.
 
 *remove the hastag infront of the code*
 ```
 download_all_models(repository)
 ```
-then if all model already downloaded you can simply disabled it again by putting hastag infront the code. 
+then if all model already downloaded you can simply disabled it again by putting **hastag** infront the code. 
 > why disable it? because it more faster to skip the process of downloading all the model then verify all the model rather then it checks all the downloaded model.
+
+### dowloading spesific model
+for downloading a spesific model not all the model you can add this function to `download_models.py`
+
+```
+def download_selected_model(repository: str, model_name: str):
+    print(f"Checking and downloading model '{model_name}' from repository '{repository}'")
+
+    repo_dir = os.path.join(os.getcwd(), repository.replace('/', '_'))
+    os.makedirs(repo_dir, exist_ok=True)
+
+    model_dir = os.path.join(repo_dir, model_name)
+    os.makedirs(model_dir, exist_ok=True)
+
+    model_file = os.path.join(model_dir, 'model.onnx')
+    meta_file = os.path.join(model_dir, 'meta.json')
+
+    if not os.path.exists(model_file):
+        print(f"Downloading model '{model_name}' to '{model_dir}'")
+        hf_hub_download(repository, f'{model_name}/model.onnx', local_dir=model_dir)
+    else:
+        print(f"Model '{model_name}' already exists at '{model_dir}', skipping download.")
+
+    if not os.path.exists(meta_file):
+        print(f"Downloading metadata for model '{model_name}' to '{model_dir}'")
+        hf_hub_download(repository, f'{model_name}/meta.json', local_dir=model_dir)
+    else:
+        print(f"Metadata for model '{model_name}' already exists at '{model_dir}', skipping download.")
+
+    print(f"Model '{model_name}' checked and downloaded successfully.")
+    return model_name
+
+```
+
+then go to `classify.py` and import the function you add earlier :
+
+```
+from download_models import download_selected_model
+```
+
+then you can remove in `classify.py` line 17 :
+`download_all_models(repository)` 
+
+then add `download_selected_model(repository, model_name)` after this line :
+
+`model_name = model_name or task.default_model`
 
 ------------
 
