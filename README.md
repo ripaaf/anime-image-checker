@@ -68,9 +68,10 @@ from download_models import download_selected_model
 then you can remove in `classify.py` line 17 :
 `download_all_models(repository)` 
 
-then add `download_selected_model(repository, model_name)` after this line :
+then add 
 
-`model_name = model_name or task.default_model`
+```download_selected_model(repository, model_name)```
+after this line : `model_name = model_name or task.default_model`
 
 ------------
 
