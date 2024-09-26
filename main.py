@@ -11,7 +11,7 @@ if __name__ == "__main__":
     image_path = "images.jpg"
 
     image_folder = "your_path_here"
-    output_folder = "your_path_here/sorted"
+    output_folder = "your_path_here"
 
     # for 1 image only #
     run_classification(task_name, image_path, model_name, imgsize)
