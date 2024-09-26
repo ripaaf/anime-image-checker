@@ -114,7 +114,7 @@ explanation about all the variable :
 
 `output_folder` the output of the multiple image classifying, the output itself making a subfolder inside where the image have been classified into.
 
-the activate the function of 1 image only you can enable :
+activate the function of 1 image only you can enable :
 ```python
 run_classification(task_name, image_path, model_name, imgsize)
 ```
