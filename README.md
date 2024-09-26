@@ -58,6 +58,10 @@ def download_selected_model(repository: str, model_name: str):
     return model_name
 
 ```
+then add this import in the file :
+```python
+from huggingface_hub import hf_hub_download
+```
 
 then go to `classify.py` and import the function you add earlier :
 
