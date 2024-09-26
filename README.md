@@ -70,7 +70,9 @@ then you can remove in `classify.py` line 17 :
 
 then add 
 
-```download_selected_model(repository, model_name)```
+```
+download_selected_model(repository, model_name)
+```
 after this line : `model_name = model_name or task.default_model`
 
 ------------
