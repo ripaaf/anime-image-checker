@@ -1,0 +1,8 @@
+{
+    "labels": [
+        "anime",
+        "real"
+    ],
+    "name": "mobilenetv3_large_100",
+    "pretrained": true
+}
