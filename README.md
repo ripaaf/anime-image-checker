@@ -9,7 +9,7 @@ first clone this repo by using :
 git clone https://github.com/ripaaf/anime-image-checker.git
 ```
 then you can download all the `requirements.txt` for this able to run
-```
+```python
 pip install -r requirements.txt
 ```
 you can run the project from the `main.py` file.
@@ -20,7 +20,7 @@ you can simply enambling the code in `classify.py` to download all the models. t
 > to download the model you run **for 1 image only first** so it can download the neccesary models, then you can disabled the download function to use 1 image or multiple image processing.
 
 *remove the hastag infront of the code*
-```
+```python
 download_all_models(repository)
 ```
 then if all model already downloaded you can simply disabled it again by putting **hastag** infront the code. 
@@ -29,7 +29,7 @@ then if all model already downloaded you can simply disabled it again by putting
 ### dowloading spesific model
 for downloading a spesific model not all the model you can add this function to `download_models.py`
 
-```
+```python
 def download_selected_model(repository: str, model_name: str):
     print(f"Checking and downloading model '{model_name}' from repository '{repository}'")
 
@@ -61,7 +61,7 @@ def download_selected_model(repository: str, model_name: str):
 
 then go to `classify.py` and import the function you add earlier :
 
-```
+```python
 from download_models import download_selected_model
 ```
 
@@ -70,7 +70,7 @@ then you can remove in `classify.py` line 17 :
 
 then add 
 
-```
+```python
 download_selected_model(repository, model_name)
 ```
 after this line : `model_name = model_name or task.default_model`
@@ -79,7 +79,7 @@ after this line : `model_name = model_name or task.default_model`
 
 ### explanation usage
 all the code for modifying are in the `main.py` 
-```
+```python
 if __name__ == "__main__":
     task_name = "Is That Anime?"  
     model_name = None 
@@ -111,11 +111,11 @@ explanation about all the variable :
 `output_folder` the output of the multiple image classifying, the output itself making a subfolder inside where the image have been classified into.
 
 the activate the function of 1 image only you can enable :
-```
+```python
 run_classification(task_name, image_path, model_name, imgsize)
 ```
 and then for multiple image you can enable :
-```
+```python
 classify_images_in_folder(task_name, image_folder, output_folder, model_name, imgsize)
 ```
 
