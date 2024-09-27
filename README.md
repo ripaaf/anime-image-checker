@@ -4,7 +4,7 @@ a non-interface image checker from huggingface repo of [anime_classification](ht
 see [Q&A](#qa).
 
 ## how to install
-first clone this repo by using :
+first clone this repo by using : *(im using python version 3.11.9)*
 ```
 git clone https://github.com/ripaaf/anime-image-checker.git
 ```
