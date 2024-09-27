@@ -28,13 +28,13 @@ def download_all_models(repository: str):
         
         if not os.path.exists(model_file):
             print(f"Downloading model '{model}' to '{model_dir}'")
-            # hf_hub_download(repository, f'{model}/model.onnx', local_dir=model_dir)
+            hf_hub_download(repository, f'{model}/model.onnx', local_dir=model_dir)
         else:
             print(f"Model '{model}' already exists at '{model_dir}', skipping download.")
         
         if not os.path.exists(meta_file):
             print(f"Downloading metadata for model '{model}' to '{model_dir}'")
-            # hf_hub_download(repository, f'{model}/meta.json', local_dir=model_dir)
+            hf_hub_download(repository, f'{model}/meta.json', local_dir=model_dir)
         else:
             print(f"Metadata for model '{model}' already exists at '{model_dir}', skipping download.")
     
