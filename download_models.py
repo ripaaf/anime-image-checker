@@ -3,6 +3,7 @@ from typing import Mapping, Tuple, Optional
 import numpy as np
 from PIL import Image
 from natsort import natsorted
+from huggingface_hub import hf_hub_download
 from huggingface_hub import HfFileSystem
 from imgutils.data import rgb_encode
 
