@@ -14,7 +14,7 @@ pip install -r requirements.txt
 ```
 you can run the project from the `main.py` file.
 ## downloading all the model
-you can simply enambling the code in `classify.py` to download all the models. the line you looking for is line 17 :
+you can simply enambling the code in `classify.py` to download all the models. the line you looking for is line 17 : *(I've added a model for checking whether a photo is anime or a real photo.)*
 
 > [!IMPORTANT]  
 > to download the model you run **for 1 image only first** so it can download the neccesary models, then you can disabled the download function to use 1 image or multiple image processing.
